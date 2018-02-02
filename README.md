@@ -5,7 +5,7 @@
 #### If you need testing your async method, wait rather than sleep
 
 ## Uses:
-- Helps avoid undeterministic apis
+- Helps avoid undeterministic tests
 - Helps have faster tests, because you wait enough (No more or less :))
 
 ## Usage
@@ -48,6 +48,6 @@ or, just add `github.com/rShetty/asyncwait` as dependency and preferably fix a v
            // You fail
         }
 
-        // Assert call was called on somethingj
+        // Assert call was called on something
 ```
 
