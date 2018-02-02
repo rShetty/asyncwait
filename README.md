@@ -15,39 +15,39 @@ or, just add `github.com/rShetty/asyncwait` as dependency and preferably fix a v
 ```
 
 ### Code:
-``` 
-        func doWork(workChan chan int, something Something)
-          go func() {
-            for i := 0; i < 5; i++ {
-              workChan <- i
-            }
-          }
+```go
+func doWork(workChan chan int, something Something)
+  go func() {
+    for i := 0; i < 5; i++ {
+      workChan <- i
+    }
+  }
 
-          something.call()
-        }
+  something.call()
+}
 ```
 
 #### The above code pushes 5 int elements into a channel and the aim is to test this async job
 
 ### Test:
-```
-        workChan := make(chan int)
-        maxWaitInMillis := 100
-        pollIntervalInMillis := 20
+```go
+workChan := make(chan int)
+maxWaitInMillis := 100
+pollIntervalInMillis := 20
 
-        doWork(workChan)
+doWork(workChan)
 
-        // Check for the length of channel to be 5
-        predicate := func() bool {
-            return len(workChan) == 5 
-        }
+// Check for the length of channel to be 5
+predicate := func() bool {
+  return len(workChan) == 5 
+}
 
-        successful := NewAsyncWait(100, 20).Check(predicate)
+successful := NewAsyncWait(100, 20).Check(predicate)
 
-        if successful != true {
-           // You fail
-        }
+if successful != true {
+  // You fail
+}
 
-        // Assert call was called on something
+// Assert call was called on something
 ```
 
