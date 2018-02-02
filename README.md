@@ -42,7 +42,7 @@ predicate := func() bool {
   return len(workChan) == 5 
 }
 
-successful := NewAsyncWait(100, 20).Check(predicate)
+successful := NewAsyncWait(maxWaitInMillis, pollIntervalInMillis).Check(predicate)
 
 if successful != true {
   // You fail
