@@ -51,3 +51,4 @@ if successful != true {
 // Assert call was called on something
 ```
 
+Working examples of usage can be found [here](https://github.com/rShetty/asyncwait/tree/master/example)
