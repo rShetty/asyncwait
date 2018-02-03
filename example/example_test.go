@@ -3,7 +3,7 @@ package example
 import (
 	"testing"
 
-	"github.com/rshetty/asyncwait"
+	"github.com/rShetty/asyncwait"
 )
 
 func TestDoWorkAsyncFunction(t *testing.T) {
