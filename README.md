@@ -1,6 +1,8 @@
 ## AsyncWait
 ### Wait, don't sleep :)
 
+[![Build Status](https://travis-ci.org/rShetty/asyncwait.svg?branch=master)](https://travis-ci.org/rShetty/asyncwait)
+
 #### Helps in testing async methods in your Go program
 #### If you need testing your async method, wait rather than sleep
 
